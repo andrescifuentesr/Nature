@@ -1,0 +1,67 @@
+.site-main {
+	width:100%;
+	padding: 0 0 1em;
+}
+
+//=============
+//Grid
+//=============
+.grid-home{
+	width: 70%;
+	margin: 3em 15%;
+}
+
+.grid-home-item {
+	text-align: center;
+	width: 30%;
+	display: inline-block;
+	vertical-align: top;
+
+	h2 {
+		color: $blue-principal;
+		text-transform: uppercase;
+		text-align: left;
+		padding: 0.5em 0;
+		border-bottom: 1px solid darken($gris-light, 10%);
+	}
+
+	.block-black-hack {
+		background: #000;
+	}
+
+	img {
+		display: block;
+		box-shadow: 1px 1px 5px #666666;
+		transition: .2s all ease-in;
+
+		&:hover {
+			opacity: 0.5;
+		}
+	}
+}
+
+.grid-feature-item-gutter {
+	margin-right: 5%;
+}
+
+article {
+		width: 70%;
+		margin: 4em 15%;
+
+		.entry-content {
+			display: inline-block;
+			vertical-align: top;
+			width: 65%;
+			margin-right: 5%;
+		}
+
+		.entry-title {
+			color: $blue-principal;
+		}
+
+		.entry-image {
+			display: inline-block;
+			vertical-align: top;
+			width: 30%;
+		}
+}

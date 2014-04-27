@@ -1,0 +1,132 @@
+//=============
+//Blog
+//=============
+
+.blog {
+
+	.wrapper-blog {
+		width: 70%;
+		margin: 2em 15%;
+	}
+
+	article {
+		width: 100%;
+		margin: 0;
+		padding: 2em 0;
+		border-bottom: 1px solid #acacac;
+
+		a {
+			color: $blue-principal;
+			transition: 0.2s all ease-in;
+
+			&:hover {
+				color: $typo-gris-dark;
+			}
+		}
+	}
+
+	.wrapper-articles {
+		display: inline-block;
+		vertical-align: top;
+		width: 65%;
+		margin-right: 5%;
+	}
+
+	.read-more {
+		position: relative;
+		padding-left: 0.5em;
+
+		a {
+			color: $typo-gris-dark;
+			transition: 0.2s all ease-in;
+
+			&:hover {
+				color: $blue-principal;
+			}
+		}
+
+		&::before {
+			content:"";
+			position:absolute;
+			top:30%;
+			left:0;
+			border-top: 5px solid transparent;
+			border-bottom: 5px solid transparent;
+			border-left: 5px solid $blue-principal;
+		}
+	}
+}
+
+.blog-archives {
+	display: inline-block;
+	vertical-align: top;
+	width: 30%;
+	margin-top: 4.6em;
+	text-align: right;
+
+	h2 {
+		padding-bottom: 0.25em;
+		color: $blue-principal;
+		border-bottom: 1px solid #acacac;
+	}
+
+	ul {
+		margin: 0;
+		list-style: none;
+	}
+
+	a {
+		color: $typo-gris-dark;
+		transition: 0.2s all ease-in;
+
+		&:hover {
+			color: $blue-principal;
+		}
+	}
+}
+
+//=============
+//Article
+//=============
+.entry-content-article {
+
+	.entry-meta-article {
+		padding-bottom: 0.5em;
+		margin-bottom: 0.5em;
+		border-bottom: 1px solid #acacac;
+	}
+
+	a {
+		color: $blue-principal;
+		transition: 0.2s all ease-in;
+
+		&:hover {
+			color: $typo-gris-dark;
+		}
+	}
+}
+
+.blog-archives-article {
+	margin-top: 3.2em;
+}
+
+//=============
+//Social
+//=============
+.bloc-social {
+	margin:0.5em 0;
+	padding-top: 1em;
+	border-top: 1px solid #acacac;
+	border-bottom: 1px solid #acacac;
+}
+
+.social-plugin {
+	width: 70%;
+	float: left;
+}
+
+.comments-link {
+	width: 30%;
+	float: right;
+	text-align: right;
+}

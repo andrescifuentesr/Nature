@@ -1,0 +1,58 @@
+// ==================
+//page Recipes
+// ==================
+
+.entry-title-recipe {
+	margin-bottom: 1em;
+}
+
+.block-recipe {
+	display: inline-block;
+	vertical-align:top;
+	width:47.5%;
+	margin-right:5%;
+	margin-bottom: 2em;
+	border:1px solid #aeaeae;
+
+	&:nth-child(2n+1) {
+		margin-right:0%;
+	}
+
+	img {
+		display: block;
+	}
+}
+
+.entry-title-recipe {
+	padding: 0.5em 1em;
+}
+
+.entry-type-recipe {
+	p {
+		font-size: 1.5em;
+		margin: 0;
+	}
+}
+
+
+// ==================
+//page article recipe
+// ==================
+
+.entry-title-paragraph {
+	p {
+		font-size: 1.8em;
+		color: $blue-principal;
+		margin: 0;
+	}
+}
+
+.entry-title-main  {
+	color:$typo-gris-light;
+	font-size:1.2em;
+	margin-bottom:2em;
+}
+
+.block-ingredients {
+	margin-bottom: 2em;
+}

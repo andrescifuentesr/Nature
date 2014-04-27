@@ -1,0 +1,85 @@
+//=============
+//Comments
+//=============
+.comments-area {
+	margin-top: 2em;
+
+	h3 {
+		border: none;
+	}
+
+	//ol
+	.comment-list {
+		margin: 0;
+		list-style: none;
+	}
+
+	//ol children
+	.children {
+		list-style: none;
+	}
+
+	//article comment
+	.comment-body {
+		width: 100%;
+		margin: 0;
+	}
+
+	.reply {
+		@include clear;
+
+		a {
+			float: right;
+			padding: 0.5em 1em;
+			background-color: $blue-principal;
+			color: #fff;
+			transition: 0.2s all ease-in;
+
+			&:hover {
+				background-color: $typo-gris-dark;
+			}
+		}
+	}
+
+	input[type="text"],
+	input[type="email"],
+	textarea {
+		width: 100%;
+		padding: 0.5em;
+		color: $typo-gris-dark;
+	}
+
+	.comment-form-author {
+		width: 49%;
+		margin-right: 2%;
+		float: left;
+	}
+
+	.comment-form-email {
+		margin-right: 0;
+		width: 49%;
+		float: left;
+	}
+
+	input[type="submit"] {
+		float: right;
+		display: inline-block;
+		background: url('../../../img/button-submit.png') no-repeat;
+		height: 41px;
+		padding-left: 3.5em;
+		text-transform: uppercase;
+		color:$typo-gris-dark;
+		transition: 0.2s all ease-in;
+
+		&:hover {
+			background-color: $blue-principal;
+			color: #fff;
+		}
+	}
+
+		//placeholder
+	::-webkit-input-placeholder {font-size:0.85em; text-transform: uppercase;}
+	:-moz-placeholder			{font-size:0.85em; text-transform: uppercase;}
+	::-moz-placeholder 			{font-size:0.85em; text-transform: uppercase;}
+	:-ms-input-placeholder 		{font-size:0.85em; text-transform: uppercase;}
+}

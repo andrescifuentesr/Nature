@@ -1,0 +1,117 @@
+.button-module-tab {
+	cursor: pointer;
+}
+
+.module-tab {
+	margin-top:3em;
+	width: 100%;
+	//display:none;
+
+	ul {
+		margin: 0;
+		position: relative;
+	}
+
+	li {
+		display: block;
+		float:left;
+		width: percentage(1/6);
+		background: #cacaca;
+		text-align: center;
+		border-right: 1px solid #fff;
+	}
+
+	label {
+		display: block;
+		color: #fff;
+		padding:0.5em 0;
+		transition: 0.3s all ease-in;
+
+		&:hover {
+			cursor: pointer;
+			background: $blue-principal ;
+		}
+	}
+
+	input[type=radio] {
+		display: none;
+	}
+
+	.tab-content {
+		background: #fff;
+		width: 603%;
+		width: calc( 600% + 6px);
+		height: 0;
+		opacity: 0;
+		position: relative;
+		border: 1px solid #acacac;
+		//transition: 0.2s all ease-in;
+	}
+
+	input[type=radio]:checked ~ .tab-content {
+		z-index: 10;
+		opacity: 1;
+		background: #fff;
+		color: $noir;
+		min-height: 30em;
+	}
+
+	input[type=radio]:checked ~ label {
+		color: #fff;
+		background: $blue-principal;
+	}
+
+	.tab-content-1 {
+		//left: 100%;
+	}
+
+	.tab-content-2 {
+		left: -100%;
+		left: calc( -100% + -1px);
+	}
+/*
+	.tab-content-3 {
+		left: -200%;
+		left: calc( -200% + -2px);
+	}
+
+	.tab-content-4 {
+		left: -300%;
+		left: calc( -300% + -3px);
+	}
+*/
+
+	.tab-close {
+		position: absolute;
+		top:0;
+		right: 0;
+		width: 3em;
+		color: $noir;
+		background:#fff;
+	}
+
+	.product-half-content {
+		position: absolute;
+		left: 0;
+		width: 60%;
+		padding: 2em;
+	}
+
+	.product-half-image {
+		position: absolute;
+		left: 60%;
+		width: 40%;
+		padding: 2em;
+	}
+
+	h2 {
+		text-align: left;
+		text-transform: uppercase;
+	}
+
+	p {
+		margin: 0;
+		text-align: left;
+	}
+
+}

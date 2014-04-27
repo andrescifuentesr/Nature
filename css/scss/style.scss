@@ -1,0 +1,107 @@
+//structure
+@import 'structure/mixins';
+@import 'structure/variables';
+@import 'inc/template';
+@import 'structure/grid';
+@import 'structure/typography';
+
+// inc
+@import 'inc/flexslider';
+// @import 'inc/supersized_shutter';
+// @import 'inc/fancybox';
+
+//theme
+@import 'theme/header';
+@import 'theme/index';
+@import 'theme/footer';
+@import 'theme/loader';
+@import 'theme/contact';
+@import 'theme/products';
+@import 'theme/acordeon';
+@import 'theme/recipe';
+@import 'theme/blog';
+@import 'theme/comments';
+
+
+*,
+*:after,
+*:before {
+  @include box-sizing(border-box);
+}
+
+
+html {
+	@include base-type($font-properties...);
+}
+
+body {
+	// Ala Trent Walton
+	@include css-hyphens(auto);
+	@extend %breakword;
+}
+
+h1 {
+	font-size: 2.5em;
+	font-family: maven_pro_light300;
+	font-weight:normal;
+}
+
+h2 {
+	font-size: 1.5em;
+	font-family: maven_pro_light300;
+	font-weight:normal;
+	color: $typo-gris-light;
+}
+
+h3 {
+	padding-bottom: 0.2em;
+	color: $typo-gris-light;
+	border-bottom: 1px solid #aeaeae;
+}
+
+p {
+	color: $typo-gris-light;
+}
+
+/* ========= Helperclass =========== */	
+
+
+%center {
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+}
+
+%vertical-center {
+	position: absolute;
+	top: 50%;
+	transform: translate(0, -50%);
+}
+
+%horizontal-center {
+	position: absolute;
+	left: 50%;
+	transform: translate(-50%, 0);
+}
+
+a { text-decoration:none; }
+
+.clearfix:before,
+.clearfix:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+/*
+ * For IE 6/7 only
+ * Include this rule to trigger hasLayout and contain floats.
+ */
+
+.clearfix {
+    *zoom: 1;
+}

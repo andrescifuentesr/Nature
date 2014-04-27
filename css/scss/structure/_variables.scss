@@ -1,0 +1,47 @@
+// SET UP YOUR VARIABLES IN THIS FILE
+
+
+// Colours
+// ------------------------------------------------------------
+
+// Define your main colour palette
+// principal
+
+$blue-principal : rgb(45, 201, 215);
+$blue-principal-dark : rgb(13, 96, 103);
+
+$gris-light : #f1f1f1;
+$gris-dark : #808080;
+
+//typo
+$typo-gris-dark : #959595;
+$typo-gris-light : #6d6c6c;
+
+//menu
+$menu-gris-light : #e7e7e7;
+$menu-gris-dark : #545454;
+
+
+$gris : #3a3a3a;
+$noir : #333333;
+$gris-fonce : #6f6f6f;
+
+
+
+$primary							: #0d6d4d;
+$secondary							: #222;	
+$tertiary							: #444;
+
+
+// Assign colours to variable roles
+$base-color							: $primary;
+$heading-color						: $secondary;
+$secondary-heading-color			: $tertiary;
+
+
+
+// Links
+$action								: $primary;
+$action-respond						: $secondary;
+$secondary-action					: $action-respond;
+$secondary-action-respond			: $action;

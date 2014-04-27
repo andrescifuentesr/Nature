@@ -1,0 +1,87 @@
+.entry-content-right {
+	display: inline-block;
+	vertical-align: top;
+	width: 30%;
+	padding-left: 2em;
+	border-left: 1px solid darken($gris-light, 10%);
+
+	a {
+		color: $blue-principal;
+	}
+}
+
+div.wpcf7{
+	margin: 3em 0;
+
+	span {
+		width: 100%;
+	}
+
+	input[type="text"],
+	input[type="email"],
+	input[type="url"],
+	input[type="password"],
+	input[type="search"],
+	input[type="tel"],
+	textarea {
+		margin-bottom: 1em;
+		width: 100%;
+		padding: 0.5em;
+		color: $typo-gris-dark;
+	}
+
+	.first-name input{
+		width: 49%;
+		margin-right: 2%;
+		float: left;
+	}
+
+	.last-name input {
+		margin-right: 0;
+		width: 49%;
+		float: left;
+	}
+
+	input[type="submit"] {
+		float: right;
+		display: inline-block;
+		background: url('../../../img/button-submit.png') no-repeat;
+		height: 41px;
+		padding-left: 3.5em;
+		text-transform: uppercase;
+		color:$typo-gris-dark;
+		transition: 0.2s all ease-in;
+
+		&:hover {
+			background-color: $blue-principal;
+			color: #fff;
+		}
+	}
+
+	//placeholder
+	::-webkit-input-placeholder {font-size:0.85em; text-transform: uppercase;}
+	:-moz-placeholder			{font-size:0.85em; text-transform: uppercase;}
+	::-moz-placeholder 			{font-size:0.85em; text-transform: uppercase;}
+	:-ms-input-placeholder 		{font-size:0.85em; text-transform: uppercase;}
+
+	//errors
+	span.wpcf7-not-valid-tip {
+		color: #E22D2D;
+	}
+
+	div.wpcf7-validation-errors {
+		background: #E22D2D;
+		color: #fff;
+		border:none;
+		padding:0.5em 0;
+		text-align:center;
+	}
+
+	div.wpcf7-mail-sent-ok {
+		background: #65BE3F;
+		color: #fff;
+		border:none;
+		padding:0.5em 0;
+		text-align:center;
+	}
+}

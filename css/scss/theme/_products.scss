@@ -1,0 +1,53 @@
+.breadcrumb {
+	margin-left: 15%;
+	display: inline-block;
+
+	ul {
+		margin: 0.5em 0 0;
+		padding: 1em;
+		border: 1px solid #acacac;
+	}
+
+	li {
+		list-style: none;
+		display: inline-block;
+		margin-right: 0.5em;
+
+		&:last-child{
+			margin-right: 0;
+		}
+
+		&::after {
+			content:">";
+			margin-left: 0.5em;
+		}
+
+		&:last-child::after{
+			content:"";
+		}
+	}
+
+	.current_page_item a {
+		color:$blue-principal;
+	}
+
+	a {
+		text-transform: uppercase;
+		color: $gris-dark;
+
+		&:hover {
+			color:$blue-principal;
+		}
+	}
+}
+
+//article 
+.products {
+		//width: 70%;
+		margin: 2em 15%;
+}
+
+.entry-image-double {
+	float: left;
+	max-width: 50%;
+}
