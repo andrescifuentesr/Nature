@@ -1,4 +1,9 @@
 //========================================== Font Face
+@import url("//hello.myfonts.net/count/2be76b");
+@font-face {font-family: 'LubalinGraphStd-Demi';src: url('../../fonts/2BE76B_0_0.eot');src: url('../../fonts/2BE76B_0_0.eot?#iefix') format('embedded-opentype'),url('../../fonts/2BE76B_0_0.woff') format('woff'),url('../../fonts/2BE76B_0_0.ttf') format('truetype'),url('../../fonts/2BE76B_0_0.svg#wf') format('svg');}
+@font-face {font-family: 'LubalinGraphStd-Book';src: url('../../fonts/2BE76B_1_0.eot');src: url('../../fonts/2BE76B_1_0.eot?#iefix') format('embedded-opentype'),url('../../fonts/2BE76B_1_0.woff') format('woff'),url('../../fonts/2BE76B_1_0.ttf') format('truetype'),url('../../fonts/2BE76B_1_0.svg#wf') format('svg');}
+
+
 @font-face {
     font-family: 'latolight';
     src: url('../../fonts/lato-lig-webfont.eot');
@@ -23,33 +28,23 @@
 
 }
 
-@font-face {
-    font-family: 'maven_pro_light300';
-    src: url('../../fonts/mavenprolight-300-webfont.eot');
-    src: url('../../fonts/mavenprolight-300-webfont.eot?#iefix') format('embedded-opentype'),
-         url('../../fonts/mavenprolight-300-webfont.woff') format('woff'),
-         url('../../fonts/mavenprolight-300-webfont.ttf') format('truetype'),
-         url('../../fonts/mavenprolight-300-webfont.svg#maven_pro_light300') format('svg');
-    font-weight: normal;
-    font-style: normal;
 
-}
 
 //==========================================
 /* Media queries */
 
 @mixin mq($mq) {
   @if $mq == desk {
-    @media (min-width: 90em) { @content; }
+    @media (min-width: $break-point-lap) { @content; }
   }
   @if $mq == lap {
-     @media only screen and (min-width: 65em)  and (max-width:  90em) { @content; }
+     @media only screen and (min-width: $break-point-tablet)  and (max-width:  $break-point-lap) { @content; }
   }
   @if $mq == tablet {
-     @media only screen and (min-width: 40em)  and (max-width:  65em) { @content; }
+     @media only screen and (min-width: $break-point-phone)  and (max-width:  $break-point-tablet) { @content; }
   }
   @if $mq == phone {
-    @media (max-width: 40em) { @content; }
+    @media (max-width: $break-point-phone ) { @content; }
   }
 }
 

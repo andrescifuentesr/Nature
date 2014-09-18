@@ -4,6 +4,7 @@
 	width: 30%;
 	padding-left: 2em;
 	border-left: 1px solid darken($gris-light, 10%);
+	@include mq(phone) { width: 100%; padding-left: 0; border:none;}
 
 	a {
 		color: $blue-principal;
@@ -12,6 +13,7 @@
 
 div.wpcf7{
 	margin: 3em 0;
+	@include mq(phone) { margin: 1em 0;}
 
 	span {
 		width: 100%;
@@ -34,12 +36,15 @@ div.wpcf7{
 		width: 49%;
 		margin-right: 2%;
 		float: left;
+		@include mq(phone) { width: 100%; margin-right: 0;}
+
 	}
 
 	.last-name input {
 		margin-right: 0;
 		width: 49%;
 		float: left;
+		@include mq(phone) { width: 100%; }
 	}
 
 	input[type="submit"] {
@@ -51,6 +56,7 @@ div.wpcf7{
 		text-transform: uppercase;
 		color:$typo-gris-dark;
 		transition: 0.2s all ease-in;
+		@include mq(phone) { width: 100%; padding-left: 0;}
 
 		&:hover {
 			background-color: $blue-principal;

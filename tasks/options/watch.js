@@ -30,5 +30,12 @@ module.exports = {
     options: {
       spawn: false
     }
+  },
+  php:{
+    files: ['./**/*.php'],
+    tasks: [],
+    options: {
+      spawn: false
+    }
   }
 }

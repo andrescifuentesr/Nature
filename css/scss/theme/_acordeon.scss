@@ -19,6 +19,8 @@
 		background: #cacaca;
 		text-align: center;
 		border-right: 1px solid #fff;
+		@include mq(tablet) { width: 25%; }
+		@include mq(phone) {  width: 50%; }
 	}
 
 	label {
@@ -46,6 +48,8 @@
 		position: relative;
 		border: 1px solid #acacac;
 		//transition: 0.2s all ease-in;
+		@include mq(tablet) { width: 400%; }
+		@include mq(phone) {  width: 200%; }
 	}
 
 	input[type=radio]:checked ~ .tab-content {
@@ -95,6 +99,8 @@
 		left: 0;
 		width: 60%;
 		padding: 2em;
+		@include mq(tablet) { padding: 2em 1em; }
+		@include mq(phone) {  width: 100%; position: relative; }
 	}
 
 	.product-half-image {
@@ -102,6 +108,8 @@
 		left: 60%;
 		width: 40%;
 		padding: 2em;
+		@include mq(tablet) { padding: 2em 1em; }
+		@include mq(phone) {  width: 100%; position: relative; left:0;}
 	}
 
 	h2 {

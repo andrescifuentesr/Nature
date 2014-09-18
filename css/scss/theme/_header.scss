@@ -4,12 +4,38 @@
 	border-bottom: 5px solid #e6e6e6;
 	background: $blue-principal;
 	box-shadow: 0 1px 10px $gris;
+	@include mq(lap) { padding: 1em 5%; }
+	@include mq(tablet) { padding: 1em 5%; }
+	@include mq(phone) {padding: 0.5em 2.5%;}
 }
+
+//=================
+//animiation header
+.header--fixed {
+	position: fixed;
+	z-index: 100;
+	right: 0;
+	left: 0;
+	top: 0;
+	transition: 0.3s all ease-out;
+}
+
+.slideDown {
+	transform: translate(0, 0);
+}
+
+.slideUp{
+	transform: translate(0, -100%);
+}
+//animiation header
+//=================
 
 .site-branding {
 	width: 35%;
 	display:inline-block;
 	vertical-align:top;
+	@include mq(tablet) { width: 100%; }
+	@include mq(phone) { width: 100%; }
 
 	h1 {margin: 0;}
 }
@@ -20,6 +46,18 @@
 	height: 78px;
 	width: 297px;
 	text-indent: -9999px;
+	@include mq(tablet) { 
+		background: url('../../../img/logo-nature-intent-small.png') no-repeat;
+		width: 180px;
+		height:48px;
+		margin: 0 auto;
+	}
+	@include mq(phone) { 
+		background: url('../../../img/logo-nature-intent-small.png') no-repeat;
+		width: 180px;
+		height:48px;
+		margin: 0 auto;
+	}
 }
 
 
@@ -31,15 +69,24 @@
 	display: inline-block;
 	vertical-align:top;
 	width: 65%;
+	@include mq(tablet) { width: auto; text-align:center; display:block;}
+	@include mq(phone) { width: auto; text-align:center; display:block;}
 }
 .main-navigation ul {
 	list-style: none;
 	padding-left: 0;
-	margin-top: 1.5em 0 0;
+	margin: 1.5em 0 0;
+	@include mq(tablet) { margin: 1em 0 0;}
+	@include mq(phone) { margin: 0;
+		border-radius: 5px;
+		border:2px solid #008C97;
+	}
 }
 .main-navigation li {
 	float: left;
 	position: relative;
+	@include mq(tablet) { float:none; display:inline-block;}
+	@include mq(phone) { float:none; display:block;}
 
 	&:first-child a {
 		border-left: none;
@@ -51,27 +98,34 @@
 	text-transform: uppercase;
 	color: #fff;
 	border-left: 1px solid #fff;
-	//margin-left:1.5em;
 	padding:0 1.5em;
 	transition: 0.2s all ease-out;
+	@include mq(phone) { border-left:none; margin:0.2em 0;}
 
 	&:hover {
 		color: $blue-principal-dark;
 	}
 }
 .main-navigation ul ul {
-	//box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
 	display: none;
 	float: left;
 	left: 0;
 	position: absolute;
 	//top: 4.5em;
 	width: 200%;
-	z-index: 99999;
+	z-index: 9999;
 	margin: 0;
 	padding-top: 44px;
 	background: $blue-principal;
 	border-bottom:3px solid $blue-principal;
+	@include mq(phone) {
+		position: static;
+		float:none;
+		width: 100%;
+		padding-top:0;
+		border-radius: 0;
+		border:none;
+	}
 }
 .main-navigation ul ul ul {
 	left: 100%;
@@ -84,11 +138,27 @@
 	padding:0.5em 0;
 	border-left:none;
 	border-bottom: 1px solid $gris-dark;
+	transition: 0.3s all ease-out;
+	@include mq(phone) { border:none;}
 }
 .main-navigation ul ul li {
 	float:none;
 	background: $menu-gris-light;
 	padding:0 1em;
+	transition: 0.3s all ease-out;
+	@include mq(phone) { padding: 0;}
+
+	&:hover {
+		@include mq(phone) {
+			background: $blue-principal-menu;
+		}		
+	}
+
+	&:hover a {
+		@include mq(phone) {
+			color:#fff;
+		}		
+	}
 
 	&:last-child a {
 		border-bottom: none;
@@ -103,6 +173,7 @@
 .main-navigation ul li:hover > ul {
 	display: block;
 }
+
 .main-navigation .current_page_item a,
 .main-navigation .current-menu-item a {
 	color:$blue-principal-dark;
@@ -112,32 +183,25 @@
 	cursor: pointer;
 	display: none;
 }
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 40em) {
 	.menu-toggle,
 	.main-navigation.toggled .nav-menu {
 		display: block;
 	}
 
+	.menu-toggle {
+		display: inline-block;
+		text-align: center;
+		font-size: 1.75em;
+		color: #fff;
+		padding: .2em .5em .2em 1.8em;
+		margin-top: 0.2em;
+		border-radius: 5px;
+		border:2px solid $blue-principal-menu;
+		background: url('../../../img/icon-menu.svg') no-repeat 0.5em center;
+	}
+
 	.main-navigation ul {
 		display: none;
 	}
-}
-.site-main .comment-navigation,
-.site-main .paging-navigation,
-.site-main .post-navigation {
-	margin: 0 0 1.5em;
-	overflow: hidden;
-}
-.comment-navigation .nav-previous,
-.paging-navigation .nav-previous,
-.post-navigation .nav-previous {
-	float: left;
-	width: 50%;
-}
-.comment-navigation .nav-next,
-.paging-navigation .nav-next,
-.post-navigation .nav-next {
-	float: right;
-	text-align: right;
-	width: 50%;
 }

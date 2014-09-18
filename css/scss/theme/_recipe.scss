@@ -2,7 +2,7 @@
 //page Recipes
 // ==================
 
-.entry-title-recipe {
+.entry-title-page-recipe {
 	margin-bottom: 1em;
 }
 
@@ -13,6 +13,8 @@
 	margin-right:5%;
 	margin-bottom: 2em;
 	border:1px solid #aeaeae;
+	@include mq(tablet) { width:100%; margin: 0 0 2em; }
+	@include mq(phone) { width: 100%; margin: 0 0 2em; }
 
 	&:nth-child(2n+1) {
 		margin-right:0%;
@@ -20,6 +22,10 @@
 
 	img {
 		display: block;
+	}
+
+	.entry-subtitle-recipe {
+		height: 3em;
 	}
 }
 
@@ -40,11 +46,8 @@
 // ==================
 
 .entry-title-paragraph {
-	p {
-		font-size: 1.8em;
-		color: $blue-principal;
-		margin: 0;
-	}
+	font-size: 2.8em;
+	color: $blue-principal;
 }
 
 .entry-title-main  {

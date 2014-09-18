@@ -1,5 +1,11 @@
 // SET UP YOUR VARIABLES IN THIS FILE
 
+//Breakpoints
+
+$break-point-phone : 40em;
+$break-point-tablet : 63em;
+$break-point-lap : 85em;
+
 
 // Colours
 // ------------------------------------------------------------
@@ -9,6 +15,7 @@
 
 $blue-principal : rgb(45, 201, 215);
 $blue-principal-dark : rgb(13, 96, 103);
+$blue-principal-menu : #008C97;
 
 $gris-light : #f1f1f1;
 $gris-dark : #808080;

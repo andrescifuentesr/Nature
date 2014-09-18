@@ -41,34 +41,43 @@ get_header(); ?>
 							);
 							$queryRecipe = new WP_Query($args);
 						?>
-						<h1 class="entry-title entry-title-recipe"><?php the_title(); ?></h1>
+						<h1 class="entry-title entry-title-page-recipe"><?php the_title(); ?></h1>
 						<?php while ($queryRecipe->have_posts()) : $queryRecipe->the_post(); ?><!--
 						--><div class="block-recipe">
 								<a href="<?php the_permalink(); ?>">
 									<img src="<?php bloginfo('template_directory'); ?>/img/chocolate.jpg" />
 									<div class="entry-title-recipe">
 										<div class="entry-type-recipe">
-											<?php the_content(); ?>
+											<p>
+												<?php //we call the taxonomy name
+													$term_list = wp_get_post_terms($post->ID, 'product-recipe', array("fields" => "names"));
+													$tax_title = $term_list[0];
+													echo $tax_title;
+												?>
+											</p>
 										</div>
-										<p><?php the_title(); ?></p>
+										<p class="entry-subtitle-recipe"><?php the_title(); ?></p>
 									</div>
 								</a>
 							</div><!--
 					--><?php endwhile; ?>
 					</div><!-- .entry-header --><!--
 
-				--><div class="entry-image">
-						<?php $args = array(
-							'type'            => 'monthly',
-							'limit'           => '',
-							'format'          => 'html', 
-							'before'          => '',
-							'after'           => '',
-							'show_post_count' => false,
-							'echo'            => 1,
-							'order'           => 'DESC'
-						); ?>
-						 <?php wp_get_archives( $args ); ?> 
+				--><div class="blog-archives">
+						<?php 
+							//list terms in a given taxonomy using wp_list_categories (also useful as a widget if using a PHP Code plugin)
+							$args = array(
+							'taxonomy'     => 'product-recipe',
+							'orderby'      => 'name',
+							'hierarchical' => 1, //1 for yes, 0 for no
+							'title_li'     => '',
+							'hide_empty'   => '0'
+							);
+						?>
+						<h2 class="widget-title"><?php _e( 'Archives', 'naturesintent' ); ?></h2>
+						<ul>
+							<?php wp_list_categories( $args ); ?>
+						</ul>
 					</div>
 				</article>
 

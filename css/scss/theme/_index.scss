@@ -1,6 +1,7 @@
 .site-main {
 	width:100%;
 	padding: 0 0 1em;
+	margin-top: 115px;
 }
 
 //=============
@@ -9,6 +10,9 @@
 .grid-home{
 	width: 70%;
 	margin: 3em 15%;
+	@include mq(lap) { width: 80%; margin: 3em 10%; }
+	@include mq(tablet) { width: 90%; margin: 3em 5%; }
+	@include mq(phone) { width: 97%; margin: 3em 1.5%; }
 }
 
 .grid-home-item {
@@ -16,6 +20,7 @@
 	width: 30%;
 	display: inline-block;
 	vertical-align: top;
+	@include mq(phone) { width: 100%; }
 
 	h2 {
 		color: $blue-principal;
@@ -42,26 +47,34 @@
 
 .grid-feature-item-gutter {
 	margin-right: 5%;
+	@include mq(phone) { margin-right: 0;}
 }
 
 article {
 		width: 70%;
 		margin: 4em 15%;
+		@include mq(lap) { width: 80%; margin: 3em 10%; }
+		@include mq(tablet) { width: 90%; margin: 3em 5%; }
+		@include mq(phone) { width: 97%; margin: 3em 1.5%; }
 
 		.entry-content {
 			display: inline-block;
 			vertical-align: top;
 			width: 65%;
 			margin-right: 5%;
+			@include mq(phone) { width: 100%; margin-right: 0;}
 		}
 
 		.entry-title {
 			color: $blue-principal;
 		}
 
-		.entry-image {
+		.entry-image,
+		.entry-archive 
+		{
 			display: inline-block;
 			vertical-align: top;
 			width: 30%;
+			@include mq(phone) { width: 100%; text-align:center;}
 		}
 }

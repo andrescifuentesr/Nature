@@ -1,12 +1,28 @@
 //=============
+//Page Archives
+//=============
+.page-title-archive {
+	color: $blue-principal;
+}
+
+.page-header {
+
+}
+
+//=============
 //Blog
 //=============
 
-.blog {
+.blog,
+.archive {
 
-	.wrapper-blog {
+	.wrapper-blog,
+	.page-header {
 		width: 70%;
 		margin: 2em 15%;
+		@include mq(lap) { width: 80%; margin: 3em 10%; }
+		@include mq(tablet) { width: 90%; margin: 3em 5%; }
+		@include mq(phone) { width: 97%; margin: 3em 1.5%; }
 	}
 
 	article {
@@ -30,6 +46,7 @@
 		vertical-align: top;
 		width: 65%;
 		margin-right: 5%;
+		@include mq(phone) { width: 100%; margin-right: 0%; }
 	}
 
 	.read-more {
@@ -63,6 +80,7 @@
 	width: 30%;
 	margin-top: 4.6em;
 	text-align: right;
+	@include mq(phone) { width: 100%; margin-top: 2em; text-align: left }
 
 	h2 {
 		padding-bottom: 0.25em;
@@ -110,6 +128,39 @@
 	margin-top: 3.2em;
 }
 
+.bloc-idem-article {
+	display:block;
+	border-top: 1px solid #acacac;
+	margin-top: 2em;
+	padding-top: 1em;
+
+	.bloc-idem-article-title {
+		text-transform: uppercase;
+	}
+
+	ul {
+		list-style:none;
+		margin: 0;
+	}
+
+	li {
+		padding-left: 1em;
+		position:relative;
+
+		&::before {
+			content:"";
+			position: absolute;
+			left: 0;
+			top:0.5em;
+			border-top: 5px solid transparent;
+			border-bottom: 5px solid transparent;
+			border-left: 5px solid $typo-gris-light;
+		}
+
+	}
+
+}
+
 //=============
 //Social
 //=============
@@ -123,10 +174,14 @@
 .social-plugin {
 	width: 70%;
 	float: left;
+	@include mq(tablet) { width: 100%; }
+	@include mq(phone) { width: 100%; }
 }
 
 .comments-link {
 	width: 30%;
 	float: right;
 	text-align: right;
+	@include mq(tablet) { width: 100%; text-align: left; }
+	@include mq(phone) { width: 100%; text-align: left;}
 }

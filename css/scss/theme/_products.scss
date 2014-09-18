@@ -1,6 +1,9 @@
 .breadcrumb {
-	margin-left: 15%;
+	margin: 1em 0 0 15%;
 	display: inline-block;
+	@include mq(lap) { margin: 1em 0 0 10%; }
+	@include mq(tablet) { margin: 1em 0 0 5%; }
+	@include mq(phone) {  margin: 1em 0 0 1.5%; }
 
 	ul {
 		margin: 0.5em 0 0;
@@ -45,6 +48,9 @@
 .products {
 		//width: 70%;
 		margin: 2em 15%;
+		@include mq(lap) { margin: 3em 10%; }
+		@include mq(tablet) { margin: 3em 5%; }
+		@include mq(phone) {  margin: 3em 1.5%; }
 }
 
 .entry-image-double {

@@ -103,7 +103,6 @@ function naturesintent_scripts() {
 
 	//wp_enqueue_script( 'naturesintent-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20130115', true );
 
-
 	//Main JS
 	wp_enqueue_script( 'naturesintent-main', get_template_directory_uri() . '/js/build/production.min.js', array('jquery'), '20140421', true );
 
